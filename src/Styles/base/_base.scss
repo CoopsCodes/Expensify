@@ -1,0 +1,19 @@
+@import "./settings";
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background: $background;
+	font-family: "Courier New", Courier, monospace;
+	font-size: $m-size;
+}
+
+button {
+	cursor: pointer;
+}
+
+button:disabled {
+	cursor: default;
+}
