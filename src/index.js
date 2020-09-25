@@ -4,19 +4,21 @@ import DashboardPage from "./App";
 import AddExpensePage from "./Components/AddExpensePage";
 import EditExpensePage from "./Components/EditExpensePage";
 import HelpPage from "./Components/HelpPage";
-import { BrowserRouter, Route } from "react-router-dom";
+import UhOh from "./Components/404";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "normalize.css/normalize.css";
 import "./App.scss";
 import * as serviceWorker from "./serviceWorker";
 
 const routes = (
 	<BrowserRouter>
-		<div>
+		<Switch>
 			<Route path="/" component={DashboardPage} exact={true} />
 			<Route path="/create" component={AddExpensePage} />
 			<Route path="/edit" component={EditExpensePage} />
 			<Route path="/help" component={HelpPage} />
-		</div>
+			<Route component={UhOh} />
+		</Switch>
 	</BrowserRouter>
 );
 
